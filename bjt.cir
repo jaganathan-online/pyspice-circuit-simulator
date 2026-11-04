@@ -1,0 +1,25 @@
+Vcc vcc 0 DC 12
+Vin in 0 SIN(0 5m 1k)
+Cin in b1 10u
+R1 vcc b1 100k
+R2 b1 0 22k
+Rc1 vcc c1 3.3k
+Re1a e1 e1a 220
+Re1b e1a 0 780
+Ce1 e1a 0 47u
+Q1 c1 b1 e1 2N2222
+Cc1 c1 b2 10u
+R3 vcc b2 100k
+R4 b2 0 22k
+R5 i1 i2 25k
+Rc2 vcc out 3.3k
+Re2a e2 e2a 220
+Re2b e2a 0 780
+Ce2 e2a 0 47u
+R6 j2 j3 28k
+Q2 out b2 e2 2N2222
+RL out 0 10k
+.model 2N2222 NPN ( BF=150 IS=1E-14 VAF=100 )
+.tran 1u 5m
+.print tran v(out)
+.end
