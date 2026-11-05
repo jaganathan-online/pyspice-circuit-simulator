@@ -1,6 +1,6 @@
 Vcc vcc 0 DC 12
-Vin in 0 SIN(0 5m 1k)
-Cin in b1 10u
+Vin1 in1 0 SIN(0 5m 1k)
+Cin1 in1 b1 10u
 R1 vcc b1 100k
 R2 b1 0 22k
 Rc1 vcc c1 3.3k
